@@ -1,27 +1,31 @@
-let seconds = 0, minutes = 0, hours = 0, clock;
+let seconds = 0, minutes = 0, hours = 0, timeSwitch, timeInput;
 
-
-const add = () => {
+const timeCounter = () => {
+    getTimeInput();
+    displayTime();
     seconds++
     if (seconds >= 60) {
         seconds = 0;
-        minutes++
+        minutes++ 
     }
-    if (seconds >= 60) {
+    else if (seconds >= 60) {
         minutes = 0;
         hours++
     }
-    timer();
-    console.log(seconds);
+    startTime();
+    compareTimeInput();
 }
-const timer = () => clock = setTimeout(add, 1000);
 
-const stop = () => clearTimeout(clock);
+const startTime = () => timeSwitch = setTimeout(timeCounter, 1000);
+const stopTime = () => clearTimeout(timeSwitch);
+const getTimeInput = () => timeInput = document.getElementById("time-input").value; 
+const compareTimeInput = () => (timeInput = parseInt(timeInput)) === minutes ? stopTime() : null;
 
-
-
-
-
+const displayTime = () => {
+    const displaySeconds = document.getElementById("seconds").innerHTML = seconds;
+    const displayMinutes = document.getElementById("minutes").innerHTML = minutes;
+    const displayHours = document.getElementById("hours").innerHTML = hours;
+}
 
 
 
