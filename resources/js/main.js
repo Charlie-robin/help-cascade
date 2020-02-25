@@ -1,12 +1,16 @@
+const getTimeValue = () => document.getElementById('input').value;
+const minusMinute = (minute) => minute - 1;
 
+window.setInterval(() => {
+    const date = new Date()
+    let minutes = date.getSeconds();
+    document.getElementById("minutes").innerHTML = 60 - seconds;
+}, 30000)
 
 
 
 window.setInterval(() => {
-    const timer = document.getElementById("input").value
     const date = new Date()
-    let minutes = date.getMinutes();
     let seconds = date.getSeconds();
-    document.getElementById("minutes").innerHTML = timer - minutes;
-    document.getElementById("seconds").innerHTML = (timer*60) - seconds;
+    document.getElementById("seconds").innerHTML = 60 - seconds;
 }, 1000)
