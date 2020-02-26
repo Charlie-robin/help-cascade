@@ -20,12 +20,19 @@ const startTime = () => timeSwitch = setTimeout(timeCounter, 200);
 const stopTime = () => clearTimeout(timeSwitch);
 const getTimeInput = () => timeInput = document.getElementById("time-input").value; 
 const compareTimeInput = () => (timeInput = parseInt(timeInput)) === minutes ? stopTime() : null;
-
 const displayTime = () => {
-    const displaySeconds = document.getElementById("seconds").innerHTML = seconds;
-    const displayMinutes = document.getElementById("minutes").innerHTML = minutes;
-    const displayHours = document.getElementById("hours").innerHTML = hours;
+    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("entered-value").innerHTML = timeInput;
 }
+
+const hideModal = () => document.getElementById("modal").style.display = "none";
+const showModal = () => document.getElementById("modal").style.display = "block";
+
+const hideTimer = () => document.getElementById("timer").style.display = "block";
+const showTimer = () => document.getElementById("timer").style.display = "block";
+
 
 
 

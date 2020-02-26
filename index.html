@@ -4,21 +4,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Cascade</title>
     <script src="./resources/js/main.js" async defer></script>
+    <link rel="stylesheet" href="./resources/css/styles.css">
 </head>
 <body>
     <section id="modal">
-        <h2>Input Time</h2>
-        <input id="time-input" type="number" required>
-        <button onclick="startTime()" id="on">On</button>
-        <span class="close">&times;</span>
+        <div>
+            <h2>Input Time</h2>
+            <input id="time-input" type="number" required>
+            <button onclick="hideModal(),showTimer(),startTime()" id="on">GO</button>
+            <span class="close" onclick="hideModal()">&times;</span>
+        </div>
     </section>
-    <section>
-        <p id="seconds"></p>
-        <p id="minutes"></p>
-        <p id="hours"></p>
-        <button onclick="startTime()" id="on">Go</button>
-        <button onclick="stopTime()" id="off">Pause</button>
-    </section>
+    <main>
+        <section id="left-side">
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+        </section>
+
+        <section id="timer">
+            <div id="circle"></div>
+
+            <p id="entered-value">10</p>
+
+            <div>
+                <p id="seconds">10</p>
+                <p id="minutes">10</p>
+                <p id="hours">10</p>
+            </div>
+
+            <button onclick="startTime()" id="on">Go</button>
+            <button onclick="stopTime()" id="off">Pause</button>
+        </section>
+
+        <section id="right-side">
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+        </section>
+    </main>
 </body>
 </html>
 
