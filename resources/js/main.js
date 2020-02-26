@@ -16,7 +16,7 @@ const timeCounter = () => {
     compareTimeInput();
 }
 
-const startTime = () => timeSwitch = setTimeout(timeCounter, 1000);
+const startTime = () => timeSwitch = setTimeout(timeCounter, 200);
 const stopTime = () => clearTimeout(timeSwitch);
 const getTimeInput = () => timeInput = document.getElementById("time-input").value; 
 const compareTimeInput = () => (timeInput = parseInt(timeInput)) === minutes ? stopTime() : null;

@@ -6,13 +6,18 @@
     <script src="./resources/js/main.js" async defer></script>
 </head>
 <body>
+    <section id="modal">
+        <h2>Input Time</h2>
+        <input id="time-input" type="number" required>
+        <button onclick="startTime()" id="on">On</button>
+        <span class="close">&times;</span>
+    </section>
     <section>
-        <input id="time-input" type="number">
         <p id="seconds"></p>
         <p id="minutes"></p>
         <p id="hours"></p>
-        <button onclick="startTime()" id="on">On</button>
-        <button onclick="stopTime()" id="off">Of</button>
+        <button onclick="startTime()" id="on">Go</button>
+        <button onclick="stopTime()" id="off">Pause</button>
     </section>
 </body>
 </html>
