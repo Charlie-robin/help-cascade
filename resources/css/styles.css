@@ -1,8 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: none;
-          box-sizing: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,6 +10,22 @@ body {
   width: 100%;
   height: 100vh;
   background: lightblue;
+}
+
+body header {
+  width: 100%;
+  height: 10%;
+  background-color: whitesmoke;
+}
+
+body header div {
+  display: inline-block;
+  margin: 20px;
+}
+
+body header h1 {
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 body #modal {
@@ -26,7 +42,6 @@ body #modal {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  display: none;
 }
 
 body #modal div {
@@ -68,108 +83,118 @@ body #modal div span {
   height: 40px;
 }
 
-body main {
+body #timer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
-  height: 100vh;
+  height: 80%;
 }
 
-body main #left-side {
+body #timer-content #timer {
+  height: 60%;
+  width: 30%;
+}
+
+body #timer-content #timer h3 {
+  text-transform: uppercase;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background-color: #e8e8e8;
+  border-radius: 20px 20px 0 0;
+}
+
+body #timer-content #timer > p {
+  height: 60%;
+  width: 100%;
+  background: white;
+}
+
+body #timer-content #timer > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20%;
-  height: 100%;
-  background: yellow;
+  height: 20%;
+  background-color: #e8e8e8;
 }
 
-body main #left-side h2 {
-  background: blueviolet;
-  height: 15%;
-  width: 80%;
-  border-radius: 20px;
+body #timer-content #timer > div p {
+  width: 30%;
 }
 
-body main #timer {
+body #timer-content #timer > div p:nth-child(2) {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+}
+
+body #timer-content #timer #pause-go-button {
+  width: 100%;
+  height: 10%;
+  border-radius: 0 0 20px 20px;
+}
+
+body #timer-content #timer #pause-go-button button {
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0 0 20px 20px;
+}
+
+body #timer-content #content {
+  height: 60%;
+  width: 40%;
+  background-color: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+body #timer-content #content div {
   width: 60%;
-  height: 100%;
-  position: relative;
 }
 
-body main #timer #circle {
-  position: absolute;
-  background: pink;
-  height: 50%;
-  width: 50%;
-  border-radius: 100%;
-  z-index: -1;
+body #timer-content #content div h2 {
+  display: block;
+  height: 10%;
+  background-color: #e8e8e8;
 }
 
-body main #timer > p {
-  font-size: 100px;
-  background: #c9c9c9;
-  width: 150px;
+body #timer-content #content div p {
+  display: inline-block;
+  width: 100%;
+  height: 90%;
 }
 
-body main #timer div {
-  background: #e8e8e8;
+body #timer-content #content #inspiration {
+  width: 40%;
+}
+
+body #progress {
+  height: 10%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 150px;
+  background-color: #e8e8e8;
+  padding: 10px 0;
 }
 
-body main #right-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20%;
-  height: 100%;
-  background: yellow;
-}
-
-body main #right-side h2 {
-  background: blueviolet;
-  height: 15%;
-  width: 80%;
-  border-radius: 20px;
+body #progress p {
+  background-color: yellow;
+  width: 10%;
 }
 /*# sourceMappingURL=styles.css.map */

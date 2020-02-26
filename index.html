@@ -15,36 +15,52 @@
             <span class="close" onclick="hideModal()">&times;</span>
         </div>
     </section>
+    <header>
+        <div>LOGO?</div>
+        <h1>Help Cascade</h1>
+    </header>
+    
     <main>
-        <section id="left-side">
-            <h2>1</h2>
-            <h2>2</h2>
-            <h2>3</h2>
-            <h2>4</h2>
-            <h2>5</h2>
-        </section>
-
-        <section id="timer">
-            <div id="circle"></div>
-
-            <p id="entered-value">10</p>
-
-            <div>
-                <p id="seconds">10</p>
-                <p id="minutes">10</p>
-                <p id="hours">10</p>
+        <section id="timer-content">
+            <div id="timer">
+                <h3>Time Box</h3>
+                <p id="entered-value">10</p>
+            
+                <div>
+                    <p id="hours">0</p>
+                    <p id="minutes">0</p>
+                    <p id="seconds">0</p>
+                </div>
+                
+                <div id="pause-go-button">
+                </div>
             </div>
 
-            <button onclick="startTime()" id="on">Go</button>
-            <button onclick="stopTime()" id="off">Pause</button>
-        </section>
+            <article id="content">
+                <div>
+                    <h2>step</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quibusdam tempore reiciendis sed nemo dicta blanditiis dignissimos fugiat, voluptas, inventore ut beatae libero. Quo illum provident, in amet ad aspernatur?</p>
+                </div>
 
-        <section id="right-side">
-            <h2>1</h2>
-            <h2>2</h2>
-            <h2>3</h2>
-            <h2>4</h2>
-            <h2>5</h2>
+                <div id="inspiration">
+                    <div>
+                        img
+                    </div>
+                    <blockquote>
+                        "you can do it"
+                    </blockquote>
+                </div>
+                
+
+            </article>
+        </section>  
+        
+        <section id="progress">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
         </section>
     </main>
 </body>
