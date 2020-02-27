@@ -12,18 +12,18 @@
         <div>
             <h2>Input Time</h2>
             <div>
-                <span class="fas fa-sort-up"></span>
-                <p id="hours">H</p>
-                <span class="fas fa-sort-down"></span>
+                <span class="fas fa-sort-up" onclick="addTime('hours')"></span>
+                <p id="hours">0</p>
+                <span class="fas fa-sort-down" onclick="minusTime('hours')"></span>
             </div>
 
             <div>
-                <span class="fas fa-sort-up"></span>
-                <p id="minutes">M</p>
-                <span class="fas fa-sort-down"></span>
+                <span class="fas fa-sort-up" onclick="addTime('minutes')"></span>
+                <p id="minutes">0</p>
+                <span class="fas fa-sort-down" onclick="minusTime('minutes')"></span>
             </div>
-            <!-- <input id="time-input" type="number" required>
-            <button onclick="hideModal(),showTimer(),startTime()" id="on">GO</button> -->
+            
+            <button onclick="hideModagit sttatusl(),getTimeInputs(),showTimer(),startTime()" id="on">GO</button>
             <span class="close" onclick="hideModal()">&times;</span>
         </div>
     </section>
@@ -36,7 +36,7 @@
         <section id="timer-content">
             <div id="timer">
                 <h3>Time Box</h3>
-                <p id="entered-value">10</p>
+                <p id="entered-value"></p>
             
                 <div>
                     <p id="hours">0</p>

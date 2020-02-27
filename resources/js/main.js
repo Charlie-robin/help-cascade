@@ -1,7 +1,7 @@
 let seconds = 0, minutes = 0, hours = 0, timeSwitch, timeInput;
+const inputHours = document.getElementById("hours"), inputMinutes = document.getElementById("minutes");
 
 const timeCounter = () => {
-    getTimeInput();
     displayTime();
     seconds++
     if (seconds >= 60) {
@@ -16,9 +16,16 @@ const timeCounter = () => {
     compareTimeInput();
 }
 
+const addTime = (type) => type === "hours" ? inputHours.innerHTML++ : inputMinutes.innerHTML++;
+const minusTime = (type) => type === "hours" ? inputHours.innerHTML-- :  inputMinutes.innerHTML--;
 
-const getTimeInput = () => timeInput = document.getElementById("time-input").value; 
-const compareTimeInput = () => (timeInput = parseInt(timeInput)) === minutes ? stopTime() : null;
+const getTimeInputs = () => {
+    const minutes = parseInt(inputMinutes.innerHTML);
+    const hours = parseInt(inputHours.innerHTML*60);
+    timeInput = minutes + hours;
+}
+
+const compareTimeInput = () => timeInput === minutes ? stopTime() : null;
 const displayTime = () => {
     document.getElementById("seconds").innerHTML = seconds;
     document.getElementById("minutes").innerHTML = minutes;
@@ -32,8 +39,7 @@ const showModal = () => document.getElementById("modal").style.display = "block"
 const hideTimer = () => document.getElementById("timer").style.display = "block";
 const showTimer = () => document.getElementById("timer").style.display = "block";
 
-
-const startTime = () => timeSwitch = setTimeout(timeCounter, 200);
+const startTime = () => timeSwitch = setTimeout(timeCounter, 1000);
 const stopTime = () => clearTimeout(timeSwitch);
 
 const togglePauseButton = (buttonType) => buttonType === "pause" ? document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('go'), stopTime()">Pause</button>`:  document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('pause'),startTime()">Go</button>`;

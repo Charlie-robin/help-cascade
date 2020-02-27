@@ -6,6 +6,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0 0 20px 20px;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -48,31 +56,71 @@ body #modal div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   width: 50%;
   height: 50%;
   background: #e8e8e8;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 20px;
 }
 
 body #modal div h2 {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 300;
+  width: 100%;
+  height: 20%;
 }
 
-body #modal div input {
-  width: 30%;
-  height: 30%;
+body #modal div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  border: 2px red solid;
+  border-radius: 20px;
+}
+
+body #modal div div span {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 40px;
+}
+
+body #modal div div p {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  background: white;
+}
+
+body #modal div button {
+  width: 100%;
+  height: 20%;
 }
 
 body #modal div .close {
@@ -143,14 +191,6 @@ body #timer-content #timer #pause-go-button {
   border-radius: 0 0 20px 20px;
 }
 
-body #timer-content #timer #pause-go-button button {
-  text-transform: uppercase;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 0 0 20px 20px;
-}
-
 body #timer-content #content {
   height: 60%;
   width: 40%;
@@ -158,6 +198,7 @@ body #timer-content #content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 20px;
 }
 
 body #timer-content #content div {
