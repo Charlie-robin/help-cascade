@@ -75,7 +75,7 @@ body #modal div input {
   height: 30%;
 }
 
-body #modal div span {
+body #modal div .close {
   position: absolute;
   right: 10px;
   top: 10px;
