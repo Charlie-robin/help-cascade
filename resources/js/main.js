@@ -89,12 +89,14 @@ class StepsContent {
     }
 }
 
+const lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi maiores repellat aperiam dolorem pariatur dolores amet voluptatem temporibus provident, rerum corporis molestiae magni? Vitae impedit quisquam veniam ad ipsum cumque?"
+
 const stepsArray =[];
-stepsArray.push(new StepsContent("Self",0,"lorem","./resources/img/self.jpg","Computers are good at following instructions, but not at reading your mind."));
-stepsArray.push(new StepsContent("Google",1,"lorem","./resources/img/google.jpg","Programming is usually taught by examples."));
-stepsArray.push(new StepsContent("Duck",2,"lorem","./resources/img/duck.jpg","A friend when you’re in hot water."));
-stepsArray.push(new StepsContent("Team",3,"lorem","./resources/img/team.jpg","Understanding is gained by sharing knowledge, not hoarding it."));
-stepsArray.push(new StepsContent("Coaches",4,"lorem","./resources/img/coach.jpg","The way to achieve your own success is to be willing to help somebody else get it first."));
+stepsArray.push(new StepsContent("Self",0,lorem,"./resources/img/self-min.jpg","Computers are good at following instructions, but not at reading your mind."));
+stepsArray.push(new StepsContent("Google",1,lorem,"./resources/img/google-min.jpg","Programming is usually taught by examples."));
+stepsArray.push(new StepsContent("Duck",2,lorem,"./resources/img/duck-min.jpg","A friend when you’re in hot water."));
+stepsArray.push(new StepsContent("Team",3,lorem,"./resources/img/team-min.jpg","Understanding is gained by sharing knowledge, not hoarding it."));
+stepsArray.push(new StepsContent("Coaches",4,lorem,"./resources/img/coach-min.jpg","The way to achieve your own success is to be willing to help somebody else get it first."));
 
 const updateContentSection = () => {
     stepCounter > -1 ? stepsArray[stepCounter].unHighLightStep() : null;
