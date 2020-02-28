@@ -63,7 +63,9 @@ body {
         position: fixed; 
         width: 100%; 
         height: 100%; 
-        background-color: rgba(0,0,0,0.4); 
+        background-image: linear-gradient( 120deg, #f43268, rgba(91, 30, 193, 1));
+        z-index: 2;
+        
         
 
         div {
@@ -72,10 +74,11 @@ body {
             align-content: space-between;
             width: 50%;
             height: 50%;
-            background: #d3c1f3;
+            background-color: #d3c1f3;
             position: relative;
             flex-wrap: wrap;
             border-radius: 20px;
+            box-shadow: 0px 0px 50px -20px #0F0B22;  
 
             h2 {
                 display: flex;
@@ -104,7 +107,7 @@ body {
                     width: 100%;
                     height: 20%;
                     font-size: 25px;
-                    background-color: #F0F0F0;
+                    background: #f0f0f0;
                 }
 
                 .fa-sort-up {
@@ -128,11 +131,13 @@ body {
             }
 
             button {
+                border-top: #f43268 1px solid;
                 width: 100%;
                 height: 20%;
             }
 
-            button:hover {
+            
+            span:hover, button:hover {
                 color:#f43268;
                 background-color: #e8e8e8;
                 cursor: pointer;
@@ -281,6 +286,12 @@ body {
             color: #4A2F73;
             text-transform: uppercase;
             box-shadow: inset 0px 0px 50px -10px #0F0B22;
+        }
+
+        .highlight {
+            background:#f0f0f0; 
+            color:#f43268; 
+            box-shadow: 0px 0px 20px 0px #0F0B22;
         }
 
         p:first-child{

@@ -74,7 +74,8 @@ body #modal {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(120deg, #f43268, #5b1ec1);
+  z-index: 2;
 }
 
 body #modal div {
@@ -88,11 +89,13 @@ body #modal div {
       align-content: space-between;
   width: 50%;
   height: 50%;
-  background: #d3c1f3;
+  background-color: #d3c1f3;
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 50px -20px #0F0B22;
+          box-shadow: 0px 0px 50px -20px #0F0B22;
 }
 
 body #modal div h2 {
@@ -145,7 +148,7 @@ body #modal div div span {
   width: 100%;
   height: 20%;
   font-size: 25px;
-  background-color: #F0F0F0;
+  background: #f0f0f0;
 }
 
 body #modal div div .fa-sort-up {
@@ -175,11 +178,12 @@ body #modal div div p {
 }
 
 body #modal div button {
+  border-top: #f43268 1px solid;
   width: 100%;
   height: 20%;
 }
 
-body #modal div button:hover {
+body #modal div span:hover, body #modal div button:hover {
   color: #f43268;
   background-color: #e8e8e8;
   cursor: pointer;
@@ -367,6 +371,13 @@ body #progress p {
   text-transform: uppercase;
   -webkit-box-shadow: inset 0px 0px 50px -10px #0F0B22;
           box-shadow: inset 0px 0px 50px -10px #0F0B22;
+}
+
+body #progress .highlight {
+  background: #f0f0f0;
+  color: #f43268;
+  -webkit-box-shadow: 0px 0px 20px 0px #0F0B22;
+          box-shadow: 0px 0px 20px 0px #0F0B22;
 }
 
 body #progress p:first-child {
