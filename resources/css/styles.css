@@ -336,6 +336,20 @@ body #timer-content #content #inspiration {
   width: 40%;
   border-radius: 0 20px 20px 0;
   border-left: #f43268 1px solid;
+  padding: 20px;
+}
+
+body #timer-content #content #inspiration img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+}
+
+body #timer-content #content #inspiration blockquote {
+  padding: 20px 0;
+  width: 100%;
+  height: 50%;
+  font-size: 20px;
 }
 
 body #progress {

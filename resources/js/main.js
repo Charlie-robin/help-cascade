@@ -90,11 +90,11 @@ class StepsContent {
 }
 
 const stepsArray =[];
-stepsArray.push(new StepsContent("Self",0,"lorem","http://placekitten.com/200/300","quote"));
-stepsArray.push(new StepsContent("Google",1,"lorem","http://placekitten.com/200/300","quote"));
-stepsArray.push(new StepsContent("Duck",2,"lorem","http://placekitten.com/200/300","quote"));
-stepsArray.push(new StepsContent("Team",3,"lorem","http://placekitten.com/200/300","quote"));
-stepsArray.push(new StepsContent("Google",4,"lorem","http://placekitten.com/200/300","quote"));
+stepsArray.push(new StepsContent("Self",0,"lorem","./resources/img/self.jpg","Computers are good at following instructions, but not at reading your mind."));
+stepsArray.push(new StepsContent("Google",1,"lorem","./resources/img/google.jpg","Programming is usually taught by examples."));
+stepsArray.push(new StepsContent("Duck",2,"lorem","./resources/img/duck.jpg","A friend when you’re in hot water."));
+stepsArray.push(new StepsContent("Team",3,"lorem","./resources/img/team.jpg","Understanding is gained by sharing knowledge, not hoarding it."));
+stepsArray.push(new StepsContent("Coaches",4,"lorem","./resources/img/coach.jpg","The way to achieve your own success is to be willing to help somebody else get it first."));
 
 const updateContentSection = () => {
     stepCounter > -1 ? stepsArray[stepCounter].unHighLightStep() : null;
