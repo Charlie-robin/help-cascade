@@ -1,4 +1,4 @@
-let seconds = 0, minutes = 0, hours = 0,stepCounter= -1, timeSwitch, timeInput;
+let seconds = 0, minutes = 0, hours = 0,stepCounter= 0, timeSwitch, timeInput;
 const inputHours = document.getElementById("hours"), inputMinutes = document.getElementById("minutes");
 
 const timeCounter = () => {
@@ -54,7 +54,7 @@ const showModal = () => document.getElementById("modal").style.display = "flex";
 const hideTimer = () => document.getElementById("timer").style.display = "block";
 const showTimer = () => document.getElementById("timer").style.display = "block";
 
-const startTime = () => timeSwitch = setTimeout(timeCounter, 100);
+const startTime = () => timeSwitch = setTimeout(timeCounter, 50);
 const stopTime = () => clearTimeout(timeSwitch);
 
 const togglePauseButton = (buttonType) => buttonType === "pause" ? document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('go'), stopTime()">Pause</button>`:  document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('pause'),startTime()">Go</button>`;
@@ -108,9 +108,10 @@ stepsArray.push(new StepsContent("Team",3,lorem,"./resources/img/team-min.jpg","
 stepsArray.push(new StepsContent("Coaches",4,lorem,"./resources/img/coach-min.jpg","The way to achieve your own success is to be willing to help somebody else get it first."));
 
 const updateContentSection = () => {
-    stepCounter > -1 ? stepsArray[stepCounter].unHighLightStep() : null;
-    stepCounter++
+    stepCounter >= 5 ? stepCounter = 0 : null;
+    stepsArray.forEach(el => el.unHighLightStep())
     stepsArray[stepCounter].displayContent();
+    stepCounter++
 }
 
 const startButton = () => {
