@@ -61,6 +61,10 @@ body header span {
   color: #4A2F73;
 }
 
+body header span:hover {
+  color: #f43268;
+}
+
 body #modal {
   display: -webkit-box;
   display: -ms-flexbox;

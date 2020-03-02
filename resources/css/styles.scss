@@ -51,8 +51,14 @@ body {
         span {
             position: absolute;
             right: 60px;
-            color:#4A2F73 ;
+            color:#4A2F73;
+
+            &:hover {
+                color: #f43268;
+            }
         }
+
+        
 
     }
 

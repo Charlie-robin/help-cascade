@@ -54,7 +54,7 @@ const showModal = () => document.getElementById("modal").style.display = "flex";
 const hideTimer = () => document.getElementById("timer").style.display = "block";
 const showTimer = () => document.getElementById("timer").style.display = "block";
 
-const startTime = () => timeSwitch = setTimeout(timeCounter, 50);
+const startTime = () => timeSwitch = setTimeout(timeCounter, 1000);
 const stopTime = () => clearTimeout(timeSwitch);
 
 const togglePauseButton = (buttonType) => buttonType === "pause" ? document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('go'), stopTime()">Pause</button>`:  document.getElementById('pause-go-button').innerHTML = `<button onclick="togglePauseButton('pause'),startTime()">Go</button>`;
@@ -123,7 +123,13 @@ updateContentSection()
 }
 
 const timeUp = () => {
+    alert("Times up, its time to escalate. Have you considered having a little break?")
     stopTime();
     clearTime();
     showModal();
+}
+
+const resetContent = () => {
+    stepCounter = 0;
+     timeUp();
 }
