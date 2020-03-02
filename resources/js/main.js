@@ -17,13 +17,21 @@ const timeCounter = () => {
 }
 
 const addTime = (type) => type === "hours" ? inputHours.innerHTML++ : inputMinutes.innerHTML++;
-const minusTime = (type) => type === "hours" ? inputHours.innerHTML-- :  inputMinutes.innerHTML--;
+
+const minusTime = (type) => {
+    if (type === 'hours' && inputHours.innerHTML > 0 ){
+        inputHours.innerHTML--
+    } else if (type !== 'hours' && inputMinutes.innerHTML > 0 ){
+        inputMinutes.innerHTML--
+    }
+}
 
 const getTimeInputs = () => {
     const minutes = parseInt(inputMinutes.innerHTML);
     const hours = parseInt(inputHours.innerHTML*60);
     timeInput = minutes + hours;
 }
+
 const clearTime = () => {
     seconds = 0;
     minutes = 0; 
@@ -32,6 +40,7 @@ const clearTime = () => {
 }
 
 const compareTimeInput = () => timeInput === minutes ? timeUp() : null;
+
 const displayTime = () => {
     document.getElementById("seconds").innerHTML = seconds;
     document.getElementById("minutes").innerHTML = minutes;
