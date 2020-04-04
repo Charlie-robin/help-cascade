@@ -14,8 +14,7 @@ Self-initiated brief to create a visual help cascade. The website lets you choos
 ## Getting Started
 
 1. Clone the repo
-2. yarn install
-3. yarn start
+2. Open Live server
 
 ## In Progress
 
