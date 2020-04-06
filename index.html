@@ -1,66 +1,75 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Help Cascade</title>
-    <script src="https://kit.fontawesome.com/75913da099.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/75913da099.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./resources/js/main.js" async defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./resources/css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
     <section id="modal">
+      <div>
+        <h2>Help Cascade</h2>
         <div>
-            <h2>Help Cascade</h2>
-            <div>
-                <span class="fas fa-sort-up" onclick="addTime('hours')"></span>
-                <p id="hours">0</p>
-                <span class="fas fa-sort-down" onclick="minusTime('hours')"></span>
-            </div>
-
-            <div>
-                <span class="fas fa-sort-up" onclick="addTime('minutes')"></span>
-                <p id="minutes">0</p>
-                <span class="fas fa-sort-down" onclick="minusTime('minutes')"></span>
-            </div>
-            
-            <button onclick="startButton()" id="on">GO</button>
+          <span class="fas fa-sort-up" onclick="addTime('hours')"></span>
+          <p id="hours">0</p>
+          <span class="fas fa-sort-down" onclick="minusTime('hours')"></span>
         </div>
+
+        <div>
+          <span class="fas fa-sort-up" onclick="addTime('minutes')"></span>
+          <p id="minutes">0</p>
+          <span class="fas fa-sort-down" onclick="minusTime('minutes')"></span>
+        </div>
+
+        <button onclick="startButton()" id="on">GO</button>
+      </div>
     </section>
     <header>
-        <img src="https://www.nology.io/wp-content/themes/nology-main-theme/assets/dist/images/Navbar-Logo-Colour.svg" alt="">
-        <span class="fas fa-redo" onclick="resetContent()"></span>
+      <img
+        src="https://www.nology.io/wp-content/themes/nology-main-theme/assets/dist/images/Navbar-Logo-Colour.svg"
+        alt=""
+      />
+      <span class="fas fa-redo" onclick="resetContent()"></span>
     </header>
-    
+
     <main>
-        <section id="timer-content">
-            <div id="timer">
-                <h3>Time Box</h3>
-                <p id="entered-value"></p>
-            
-                <div>
-                    <p id="hours">0</p>
-                    <p id="minutes">0</p>
-                    <p id="seconds">0</p>
-                </div>
-                
-                <div id="pause-go-button">
-                </div>
-            </div>
+      <section id="timer-content">
+        <div id="timer">
+          <h3>Time Box</h3>
+          <p id="entered-value"></p>
 
-            <article id="content">
-                
-            </article>
-        </section>  
-        
-        <section id="progress">
-            <p>Self</p>
-            <p>Google</p>
-            <p>Duck</p>
-            <p>Team</p>
-            <p>Coaches</p>
-        </section>
+          <div>
+            <p id="hours">0</p>
+            <p id="minutes">0</p>
+            <p id="seconds">0</p>
+          </div>
+
+          <div id="pause-go-button"></div>
+        </div>
+
+        <article id="content"></article>
+      </section>
+
+      <section id="progress">
+        <p>Self</p>
+        <p>Google</p>
+        <p>Duck</p>
+        <p>Team</p>
+        <p>Coaches</p>
+      </section>
     </main>
-</body>
+  </body>
 </html>
-
