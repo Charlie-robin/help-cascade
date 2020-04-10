@@ -3,8 +3,8 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  color: #4A2F73;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  color: #4a2f73;
 }
 
 button {
@@ -16,10 +16,11 @@ button {
   letter-spacing: 2px;
 }
 
-h2, h3 {
+h2,
+h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
@@ -37,8 +38,8 @@ body header {
   width: 100%;
   height: 10vh;
   background-color: #d3c1f3;
-  -webkit-box-shadow: 0px 10px 50px -10px #0F0B22;
-          box-shadow: 0px 10px 50px -10px #0F0B22;
+  -webkit-box-shadow: 0px 10px 50px -10px #0f0b22;
+          box-shadow: 0px 10px 50px -10px #0f0b22;
   position: relative;
 }
 
@@ -58,7 +59,7 @@ body header h1 {
 body header span {
   position: absolute;
   right: 60px;
-  color: #4A2F73;
+  color: #4a2f73;
 }
 
 body header span:hover {
@@ -75,14 +76,14 @@ body #modal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(120deg, #f43268, #5b1ec1);
   z-index: 2;
 }
 
-body #modal div {
+body #modal #modal-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,18 +92,18 @@ body #modal div {
           justify-content: space-evenly;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 70%;
   background-color: #d3c1f3;
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 50px -20px #0F0B22;
-          box-shadow: 0px 0px 50px -20px #0F0B22;
+  -webkit-box-shadow: 0px 0px 50px -20px #0f0b22;
+          box-shadow: 0px 0px 50px -20px #0f0b22;
 }
 
-body #modal div h2 {
+body #modal #modal-content h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,13 +116,30 @@ body #modal div h2 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-size: 40px;
-  font-weight: 300;
+  font-size: 30px;
   width: 100%;
-  height: 20%;
+  height: 15%;
 }
 
-body #modal div div {
+body #modal #modal-content #timer-headings {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-weight: 300;
+}
+
+body #modal #modal-content #timer-headings p {
+  width: 40%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body #modal #modal-content .timer-input {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +157,7 @@ body #modal div div {
   border-radius: 20px;
 }
 
-body #modal div div span {
+body #modal #modal-content .timer-input span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,15 +173,16 @@ body #modal div div span {
   background: #f0f0f0;
 }
 
-body #modal div div .fa-sort-up {
+body #modal #modal-content .timer-input .fa-sort-up {
   border-radius: 20px 20px 0 0;
 }
 
-body #modal div div .fa-sort-down {
+body #modal #modal-content .timer-input .fa-sort-down {
   border-radius: 0 0 20px 20px;
 }
 
-body #modal div div p {
+body #modal #modal-content .timer-input #hours,
+body #modal #modal-content .timer-input #minutes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,13 +200,14 @@ body #modal div div p {
   background: white;
 }
 
-body #modal div button {
+body #modal #modal-content button {
   border-top: #f43268 1px solid;
   width: 100%;
   height: 20%;
 }
 
-body #modal div span:hover, body #modal div button:hover {
+body #modal #modal-content span:hover,
+body #modal #modal-content button:hover {
   color: #f43268;
   background-color: #e8e8e8;
   cursor: pointer;
@@ -195,26 +215,22 @@ body #modal div span:hover, body #modal div button:hover {
 
 body #timer-content {
   width: 100%;
-  height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  grid-gap: 20px;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   background-image: linear-gradient(135deg, #f43268, #5b1ec1);
 }
 
 body #timer-content #timer {
   display: inline-block;
   height: 60vh;
-  width: 30%;
+  width: 100%;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 50px -10px #0F0B22;
-          box-shadow: 0px 0px 50px -10px #0F0B22;
+  -webkit-box-shadow: 0px 0px 50px -10px #0f0b22;
+          box-shadow: 0px 0px 50px -10px #0f0b22;
 }
 
 body #timer-content #timer h3 {
@@ -232,6 +248,7 @@ body #timer-content #timer h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 400;
 }
 
 body #timer-content #timer > p {
@@ -246,13 +263,12 @@ body #timer-content #timer > p {
           justify-content: center;
   height: 60%;
   width: 100%;
-  background: #F0F0F0;
+  background: #f0f0f0;
   font-size: 80px;
-  border-bottom: 1px solid #f43268;
   border-top: 1px solid #f43268;
 }
 
-body #timer-content #timer > div {
+body #timer-content #timer #counter-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +278,7 @@ body #timer-content #timer > div {
   height: 10%;
 }
 
-body #timer-content #timer > div p {
+body #timer-content #timer #counter-numbers p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,16 +294,41 @@ body #timer-content #timer > div p {
   background-color: #d3c1f3;
 }
 
-body #timer-content #timer > div p:nth-child(2) {
-  border-left: 1px #f43268  solid;
+body #timer-content #timer #counter-numbers p:nth-child(2) {
+  border-left: 1px #f43268 solid;
   border-right: 1px #f43268 solid;
+}
+
+body #timer-content #timer #counter-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 5%;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #f43268;
+}
+
+body #timer-content #timer #counter-names p {
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 10px;
 }
 
 body #timer-content #timer #pause-go-button {
   border-top: #f43268 solid 1px;
   width: 100%;
-  height: 15%;
+  height: 10%;
   border-radius: 0 0 50px 20px;
+}
+
+body #timer-content #timer #pause-go-button button {
+  height: 100%;
 }
 
 body #timer-content #timer #pause-go-button button:hover {
@@ -297,20 +338,25 @@ body #timer-content #timer #pause-go-button button:hover {
 }
 
 body #timer-content #content {
-  -webkit-box-shadow: 0px 0px 50px -20px #0F0B22;
-          box-shadow: 0px 0px 50px -20px #0F0B22;
+  -webkit-box-shadow: 0px 0px 50px -20px #0f0b22;
+          box-shadow: 0px 0px 50px -20px #0f0b22;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 20vh;
-  height: 60vh;
-  width: 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+  width: 100%;
   background-color: #ddd;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 body #timer-content #content div {
-  width: 60%;
+  width: 100%;
+  height: 60%;
 }
 
 body #timer-content #content div h3 {
@@ -320,9 +366,10 @@ body #timer-content #content div h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 15%;
-  border-radius: 20px 0 0 0;
   background-color: #d3c1f3;
   border-bottom: #f43268 1px solid;
 }
@@ -331,29 +378,34 @@ body #timer-content #content div p {
   display: inline-block;
   width: 100%;
   height: 85%;
-  padding: 20px;
-  background: #F0F0F0;
-  border-radius: 0 0 0 20px;
+  padding: 5px 10px;
+  background: #f0f0f0;
+  font-size: 15px;
 }
 
 body #timer-content #content #inspiration {
-  width: 40%;
-  border-radius: 0 20px 20px 0;
-  border-left: #f43268 1px solid;
-  padding: 20px;
+  width: 100%;
+  height: 40%;
+  border-top: #f43268 1px solid;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #timer-content #content #inspiration img {
-  width: 100%;
-  height: 50%;
+  height: 100%;
+  width: 50%;
   border-radius: 20px;
 }
 
 body #timer-content #content #inspiration blockquote {
-  padding: 20px 0;
+  padding-left: 10px;
   width: 100%;
-  height: 50%;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 body #progress {
@@ -365,10 +417,10 @@ body #progress {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0px -10px 30px -10px #0F0B22;
-          box-shadow: 0px -10px 30px -10px #0F0B22;
-  padding: 10px 0;
-  background-color: #4A2F73;
+  -webkit-box-shadow: 0px -10px 30px -10px #0f0b22;
+          box-shadow: 0px -10px 30px -10px #0f0b22;
+  padding: 10px;
+  background-color: #4a2f73;
 }
 
 body #progress p {
@@ -382,27 +434,127 @@ body #progress p {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #d3c1f3;
-  width: 10%;
-  margin-left: 10vh;
-  border-radius: 20px;
-  color: #4A2F73;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #4a2f73;
   text-transform: uppercase;
-  -webkit-box-shadow: inset 0px 0px 50px -10px #0F0B22;
-          box-shadow: inset 0px 0px 50px -10px #0F0B22;
+  font-size: 15px;
+  -webkit-box-shadow: inset 0px 0px 50px -10px #0f0b22;
+          box-shadow: inset 0px 0px 50px -10px #0f0b22;
 }
 
 body #progress .highlight {
   background: #f0f0f0;
   color: #f43268;
-  -webkit-box-shadow: 0px 0px 20px 0px #0F0B22;
-          box-shadow: 0px 0px 20px 0px #0F0B22;
+  -webkit-box-shadow: 0px 0px 20px 0px #0f0b22;
+          box-shadow: 0px 0px 20px 0px #0f0b22;
 }
 
 body #progress p:first-child {
-  margin-left: 20vh;
+  border-radius: 10px 0 0 10px;
 }
 
 body #progress p:last-child {
-  margin-right: 20vh;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (min-width: 724px) {
+  body #timer-content {
+    width: 100%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: linear-gradient(135deg, #f43268, #5b1ec1);
+  }
+  body #timer-content #timer {
+    width: 40%;
+  }
+  body #timer-content #content {
+    -webkit-box-shadow: 0px 0px 50px -20px #0f0b22;
+            box-shadow: 0px 0px 50px -20px #0f0b22;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 60vh;
+    width: 50%;
+  }
+  body #timer-content #content div {
+    width: 60%;
+    height: 100%;
+  }
+  body #timer-content #content div p {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background: #f0f0f0;
+  }
+  body #timer-content #content #inspiration {
+    width: 40%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    border-left: #f43268 1px solid;
+    padding: 10px;
+    border-top: none;
+    display: block;
+  }
+  body #timer-content #content #inspiration img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+  }
+  body #timer-content #content #inspiration blockquote {
+    padding-top: 10px;
+    padding-left: 0;
+    width: 100%;
+    height: 50%;
+  }
+  body #progress p {
+    width: 10%;
+    margin-left: 10vh;
+    border-radius: 20px;
+  }
+  body #progress p:first-child {
+    margin-left: 10vh;
+    border-radius: 20px;
+  }
+  body #progress p:last-child {
+    margin-right: 10vh;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body #modal #modal-content {
+    width: 50%;
+    height: 60%;
+  }
+  body #timer-content #timer {
+    width: 30%;
+  }
+  body #timer-content #content {
+    width: 40%;
+  }
+  body #timer-content #content div p {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+  body #timer-content #content #inspiration {
+    padding: 15px;
+  }
+  body #timer-content #content #inspiration blockquote {
+    padding-top: 20px;
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

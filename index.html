@@ -20,17 +20,23 @@
   </head>
   <body>
     <section id="modal">
-      <div>
+      <div id="modal-content">
         <h2>Help Cascade</h2>
-        <div>
+        <div id="timer-headings">
+          <p>Hours</p>
+          <p>Minutes</p>
+        </div>
+        <div class="timer-input">
           <span class="fas fa-sort-up" onclick="addTime('hours')"></span>
           <p id="hours">0</p>
+
           <span class="fas fa-sort-down" onclick="minusTime('hours')"></span>
         </div>
 
-        <div>
+        <div class="timer-input">
           <span class="fas fa-sort-up" onclick="addTime('minutes')"></span>
           <p id="minutes">0</p>
+
           <span class="fas fa-sort-down" onclick="minusTime('minutes')"></span>
         </div>
 
@@ -50,12 +56,19 @@
         <div id="timer">
           <h3>Time Box</h3>
           <p id="entered-value"></p>
+          
+          <div id ="counter-names">
+            <p>hrs</p>
+            <p>mins</p>
+            <p>secs</p>
+          </div>
 
-          <div>
+          <div id="counter-numbers">
             <p id="hours">0</p>
             <p id="minutes">0</p>
             <p id="seconds">0</p>
           </div>
+
 
           <div id="pause-go-button"></div>
         </div>
